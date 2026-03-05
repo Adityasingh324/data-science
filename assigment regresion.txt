@@ -1,0 +1,53 @@
+Q1. Explain the difference between simple linear regression and multiple linear regression. Provide an example of each.
+answer 1.
+1. Simple Linear RegressionSimple linear regression models the relationship between one independent variable ($x$) and one dependent variable ($y$). It assumes a straight-line relationship
+Example:
+Predicting a student's final exam score (dependent) based solely on the number of hours they studied (independent). In this case, you are looking at how a single factor directly influences the result.
+2. Multiple Linear RegressionMultiple linear regression models the relationship between two or more independent variables (x_1, x_2, ..., x_n) and one dependent variable (y). This is used when an outcome is influenced by a complex set of factors.
+Example:Predicting the market price of a house (dependent). Instead of looking only at the square footage, you consider multiple independent variables:Square footage (x_1)Number of bedrooms (x_2)Age of the house (x_3)Distance from the city center (x_4)
+
+answer 2.
+The four primary assumptions are:-
+1.Linearity:The relationship between the independent variables (x) and the mean of the dependent variable ($y$) must be linear. If the true relationship is curved, a straight line will fail to capture the data accurately.to check: Create a Scatter Plot of the independent variable vs. the dependent variable.
+2. Independence of Errors:The observations (and their errors) must be independent of each other. This is particularly important in time-series data, where today’s value might depend on yesterday’s value.to check: Use the Durbin-Watson test.
+3. Normality of Residuals: For any fixed value of x,the residuals (the differences between observed and predicted values) should be normally distributed. This is crucial for calculating valid confidence intervals and p-values. to check: * Q-Q Plot (Quantile-Quantile Plot): The points should closely follow a straight diagonal line.
+4. Homoscedasticity (Equal Variance):The variance of the residual terms should be constant across all levels of the independent variables. If the variance changes (e.g., the "spread" of data points gets wider as x increases), it is called heteroscedasticity.to check: Use a Residual vs. Fitted plot.
+
+answer 3:
+1. The Intercept:The Intercept represents the predicted value of the dependent variable when the independent variable is zero.
+2. The Slope:The Slope represents the average change in the dependent variable for every one-unit increase in the independent variable.
+Suppose you are modeling the daily water consumption of a small city based on the average daily temperature. Your regression model results in the following equation:{Water Usage (Liters)} = 500 + 25({Temperature in °C}).
+Interpretation of the Results:The Intercept (500):When the temperature is 0°C, the predicted base water usage is 500 liters. This represents the "baseline" consumption—water used for essential indoor activities like cooking or cleaning that happens regardless of the weather.The Slope (25):For every 1°C increase in temperature, the daily water usage is predicted to increase by 25 liters. This reflects the extra water used for things like gardening, cooling systems, or increased hydration as the weather gets warmer.
+
+answer 4:
+Gradient Descent is an optimization algorithm used to minimize a function by iteratively moving in the direction of the steepest descent. In simpler terms, it is a mathematical "compass" that helps an algorithm find the lowest point (the minimum error) in a complex landscape.
+Gradient Descent is the "engine" behind almost all modern machine learning models, from simple linear regression to complex deep learning neural networks.
+
+Linear Regression: It finds the line of best fit by minimizing the sum of squared residuals.
+
+Neural Networks: It is the core of Backpropagation. The algorithm calculates the error at the output layer and uses gradient descent to adjust every weight in every layer of the network to reduce that error.
+
+Logistic Regression: It optimizes the "Log-Loss" function to find the best boundary for classification.
+
+answer 5:
+The Multiple Linear Regression (MLR) model is a statistical technique used to predict the value of a dependent variable based on the value of two or more independent variables.
+The fundamental difference is the dimensionality of the data and the complexity of the relationships being modeled.
+
+answer 6::
+Multicollinearity occurs in multiple linear regression when two or more independent variables are highly correlated with each other. This means one predictor variable can be linearly predicted from the others with a substantial degree of accuracy
+There are two primary ways to spot this issue:
+
+1. Correlation Matrix
+You can create a heatmap or a table showing the correlation between all pairs of independent variables. A correlation coefficient close to +1 or -1 (typically above 0.8) indicates a strong relationship.
+
+2. Variance Inflation Factor (VIF)
+VIF is the most common formal metric. It measures how much the variance of an estimated regression coefficient is increased because of collinearity
+
+
+answer 7:
+Polynomial Regression is a form of regression analysis in which the relationship between the independent variable x and the dependent variable y is modeled as an n degree polynomial.
+The primary difference lies in the shape of the functional relationship between the variables.
+
+answer 8:
+Advantages and DisadvantagesFeatureAdvantagesDisadvantagesFlexibilityCan model non-linear relationships that a straight line would miss.Highly susceptible to overfitting, where the model follows random noise rather than the trend.Data FitGenerally achieves a higher $R^2$ value on the training data because it can curve to meet points.Can produce unreliable predictions at the extreme ends of the data range (extrapolation).ComplexityAllows for the modeling of physical or biological processes that have peaks and valleys.Requires more computational power and careful feature selection to choose the right degree ($n$).InterpretabilityCaptures complex trends within a single mathematical framework.Becomes difficult to interpret as the degree increases (it’s hard to explain the physical meaning of
+
